@@ -14,33 +14,37 @@ public class Dictionary_Controller {
     
     public Dictionary_Controller() {
     }
-
-    public void searchbyInitial(char initial) {
-        // TODO implement here
+    public Word getWord(){
+    	return word;
+    }
+    public Dictionary getDictionary(){
+    	return dic;
+    }
+    public void searchbyInitial(char alphabet) {
+        word = db.selectRandomWordbyAlphabet(alphabet);
     }
 
-    public void searchbyFullWord(String wordname) {
-        // TODO implement here
+    public void searchbyFullWord(String userTypedWord) {
+       word = db.selectWordbyText(userTypedWord);
     }
 
     public void search(String text) {
-        if(text.length()==1){
+        if(text.length() == 1){
         	char alphabet = text.charAt(0);
         	this.searchbyInitial(alphabet);
-        } else if(text.length() >1){
+        } else if(text.length() > 1){
         	String userTypedWord = text;
-        	word = db.selectWordbyText(userTypedWord);
+        	this.searchbyFullWord(userTypedWord);
         }
         word.setXPos(0);
         word.setYPos(0);
     }
-
     public void dictionaryOpen() {
     	db.initializeDictionary(dic);
     }
 
     public void init() {
-        // TODO implement here
+    	dic.getWordArr().clear();
     }
 
 }
