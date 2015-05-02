@@ -79,29 +79,6 @@ public class Database {
         // TODO implement here
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     public void selectKeyboardImage(Picture vKeyboard)
     {
     	
