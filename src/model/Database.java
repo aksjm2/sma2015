@@ -34,7 +34,7 @@ public class Database {
     }
 
     public Word selectGameWord(int randomword) {
-    	Word word = new Word();//commit test 3
+    	Word word = new Word();//commit test 4
         String sql = "select * from Word where key ='"+randomword+"'";
         try {
 			stmt = conn.createStatement();        
