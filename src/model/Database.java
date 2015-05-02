@@ -113,4 +113,9 @@ public class Database {
 		return null;
 	}
 
+	public Word selectRandomWordbyAlphabet(char alphabet) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
