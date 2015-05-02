@@ -34,9 +34,9 @@ public class Database {
     }
 
     public Word selectGameWord(int randomword) {
+    	Word word = new Word();
         String sql = "select * from Word where key ='"+randomword+"'";
         try {
-        	Word word = new word();
 			stmt = conn.createStatement();        
 			rs = stmt.executeQuery(sql);
 			if(rs.next())
