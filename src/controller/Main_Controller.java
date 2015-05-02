@@ -9,13 +9,14 @@ public class Main_Controller {
 	private Game_Controller gamecontrol;
 	private Dictionary_Controller dictionarycontrol;
 	private Picture_Controller picturecontrol;
-	private int state;
+	private int state=0;
 	private Database db;
 
 	public static void main(String args[])
 	{
 		
 	}
+	
     public void quit() {
     	switch(state)
     	{
